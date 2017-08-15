@@ -6,20 +6,17 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.spring.conf.DataSourceConfiguration;
-import com.example.spring.dao.CustomerDAOImpl;
+import com.example.spring.dao.CustomerDAO;
 import com.example.spring.model.Customer;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(classes=DataSourceConfiguration.class)
 public class SpringJdbcTemplateApplicationTests {
     
     @Autowired
-    private CustomerDAOImpl customerDao;
+    private CustomerDAO customerDao;
     
 	@Test
 	public void testAddCustomer() {
